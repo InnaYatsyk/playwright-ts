@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+.auth/
+
+# TypeScript
+dist/
+build/
+*.tsbuildinfo
+*.js.map
+
+# Environment / secrets
+.env
+.env.local
+.env.*.local
+
+# IDE — VS Code
+.vscode/
+
+# IDE — JetBrains (WebStorm / IntelliJ)
+.idea/
+*.iml
+
+# IDE — Visual Studio
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# macOS
+.DS_Store
