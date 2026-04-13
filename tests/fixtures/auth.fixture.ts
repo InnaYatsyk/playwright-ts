@@ -1,4 +1,4 @@
-import { Page } from '@playwright/test';
+import type { Page } from '@playwright/test';
 import { test as base } from './services.fixture';
 import { storageStatePath } from '../helpers/storageState';
 import { STANDARD_USER } from '../data/users';
