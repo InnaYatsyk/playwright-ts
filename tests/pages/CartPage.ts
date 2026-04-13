@@ -14,8 +14,10 @@ export class CartPage {
   }
 
   async removeItemByName(name: string): Promise<void> {
-    const item = this.page.getByTestId('cart-item').filter({ hasText: name });
-    await item.getByRole('button', { name: 'Remove' }).click();
+    const names = await this.page.getByTestId('inventory-item-name').allInnerTexts();
+    const index = names.indexOf(name);
+    if (index === -1) throw new Error(`Item "${name}" not found in cart`);
+    await this.page.getByRole('button', { name: 'Remove' }).nth(index).click();
   }
 
   async proceedToCheckout(): Promise<void> {
