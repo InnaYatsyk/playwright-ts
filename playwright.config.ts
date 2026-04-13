@@ -15,6 +15,7 @@ export default defineConfig({
   globalTeardown: './tests/global-teardown',
   use: {
     baseURL: 'https://www.saucedemo.com',
+    testIdAttribute: 'data-test',
     trace: 'on-first-retry',
   },
   projects: [
